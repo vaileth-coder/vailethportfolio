@@ -1,19 +1,19 @@
 const EDUCATION = [
   {
-    level: "Shahada ya Kwanza",
-    levelEn: "Bachelor's Degree",
-    title: "Bachelor of Engineering in Computer Science Engineering",
-    institution: "St. Joseph University in Tanzania",
-    focus:
-      "Undergraduate engineering programme focused on computer science, software systems, and engineering practice.",
-  },
-  {
     level: "Diploma",
     levelEn: "Diploma Level",
     title: "Diploma in Computer Science",
     institution: "Ruaha Catholic University, Tanzania",
     focus:
       "Diploma-level computing and IT foundations, covering core principles of information technology and computer systems.",
+  },
+  {
+    level: "Shahada ya Kwanza",
+    levelEn: "Bachelor's Degree",
+    title: "Bachelor of Engineering in Computer Science Engineering",
+    institution: "St. Joseph University in Tanzania",
+    focus:
+      "Undergraduate engineering programme focused on computer science, software systems, and engineering practice.",
   },
 ] as const;
 
