@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,14 +12,20 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const sourceSerif = Source_Serif_4({
+  variable: "--font-source-serif",
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+});
+
 export const metadata: Metadata = {
   title: "Vaileth James | Wasifu wa kitaalamu",
   description:
-    "Mhandisi wa kompyuta na AI — St. Joseph University Dar es Salaam. Miradi ya mfumo wa usimamizi wa hospitali.",
+    "Bachelor of Engineering in Computer Science Engineering — ICT, AI engineering, and full stack development.",
   openGraph: {
     title: "Vaileth James",
     description:
-      "Computer Science Engineering · AI engineering · Miradi ya wavuti",
+      "Computer Science Engineering · Full Stack AI Engineering · Academic Portfolio",
     type: "website",
   },
 };
@@ -32,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="sw">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${sourceSerif.variable} font-sans antialiased`}
       >
         {children}
       </body>

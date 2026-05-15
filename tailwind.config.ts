@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
+        serif: ["var(--font-source-serif)", "Georgia", "serif"],
         mono: ["var(--font-geist-mono)", "monospace"],
       },
     },
