@@ -3,20 +3,28 @@
 @tailwind utilities;
 
 :root {
-  --bg: #0c0f14;
-  --surface: #141a22;
-  --border: #243044;
-  --text: #e8eef6;
-  --muted: #8b9cb3;
-  --accent: #3d9cf0;
-  --accent-soft: rgba(61, 156, 240, 0.12);
+  --bg: #f0f7ff;
+  --surface: #ffffff;
+  --border: #bfdbfe;
+  --text: #0f172a;
+  --muted: #475569;
+  --accent: #0284c7;
+  --accent-bright: #0ea5e9;
+  --accent-soft: rgba(14, 165, 233, 0.12);
+  --accent-glow: rgba(14, 165, 233, 0.35);
 }
 
 body {
   color: var(--text);
-  background: radial-gradient(
-      ellipse 80% 50% at 50% -20%,
-      rgba(61, 156, 240, 0.18),
+  background:
+    radial-gradient(
+      ellipse 90% 60% at 50% -10%,
+      var(--accent-glow),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 100% 50%,
+      rgba(2, 132, 199, 0.08),
       transparent
     ),
     var(--bg);

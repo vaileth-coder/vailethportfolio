@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Vaileth James",
     description:
-      "Computer Science Engineering · AI engineering · KigonZile Dispensary",
+      "Computer Science Engineering · AI engineering · Miradi ya wavuti",
     type: "website",
   },
 };
