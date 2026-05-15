@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const EDUCATION = [
   {
     level: "Diploma",
@@ -133,28 +135,40 @@ export default function Home() {
           </div>
         </nav>
 
-        <header className="space-y-5 border-b border-[var(--border)] pb-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[var(--accent)]">
-            Wasifu wa kitaalamu · Academic Portfolio
-          </p>
-          <h1 className="font-serif text-4xl font-bold tracking-tight text-[var(--text)] sm:text-5xl">
-            Vaileth James
-          </h1>
-          <p className="text-sm font-medium uppercase tracking-wide text-[var(--muted)]">
-            Computer Science Engineer · Full Stack AI Engineering
-          </p>
-          <p className="max-w-2xl text-base leading-[1.8] text-[var(--muted)] sm:text-lg">
-            Mhandisi wa kompyuta mwenye mafunzo ya kitaaluma katika{" "}
-            <em className="font-medium not-italic text-[var(--text)]">
-              Computer Science Engineering
-            </em>{" "}
-            na msingi imara wa{" "}
-            <em className="font-medium not-italic text-[var(--text)]">
-              computing &amp; IT foundations
-            </em>
-            . Nina uzoefu katika mifumo ya ICT, uhandisi wa programu, na
-            matumizi ya teknolojia katika sekta ya afya na fedha.
-          </p>
+        <header className="grid gap-8 border-b border-[var(--border)] pb-10 sm:grid-cols-[13rem_1fr] sm:items-start sm:gap-10">
+          <div className="relative mx-auto aspect-[3/4] w-44 shrink-0 overflow-hidden rounded-2xl border-2 border-[var(--border)] bg-[var(--surface)] shadow-xl shadow-blue-200/50 sm:mx-0 sm:w-52">
+            <Image
+              src="/myimage.jpeg"
+              alt="Vaileth James"
+              fill
+              priority
+              sizes="(max-width: 640px) 176px, 208px"
+              className="object-cover object-top"
+            />
+          </div>
+          <div className="space-y-5">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[var(--accent)]">
+              Wasifu wa kitaalamu · Academic Portfolio
+            </p>
+            <h1 className="font-serif text-4xl font-bold tracking-tight text-[var(--text)] sm:text-5xl">
+              Vaileth James
+            </h1>
+            <p className="text-sm font-medium uppercase tracking-wide text-[var(--muted)]">
+              Computer Science Engineer · Full Stack AI Engineering
+            </p>
+            <p className="max-w-2xl text-base leading-[1.8] text-[var(--muted)] sm:text-lg">
+              Mhandisi wa kompyuta mwenye mafunzo ya kitaaluma katika{" "}
+              <em className="font-medium not-italic text-[var(--text)]">
+                Computer Science Engineering
+              </em>{" "}
+              na msingi imara wa{" "}
+              <em className="font-medium not-italic text-[var(--text)]">
+                computing &amp; IT foundations
+              </em>
+              . Nina uzoefu katika mifumo ya ICT, uhandisi wa programu, na
+              matumizi ya teknolojia katika sekta ya afya na fedha.
+            </p>
+          </div>
         </header>
 
         <div className="mt-10 space-y-8">
