@@ -22,6 +22,15 @@ const SKILLS = [
   "Miradi ya wavuti",
 ] as const;
 
+const CONTACT = {
+  phones: [
+    { display: "0652 137 485", href: "tel:+255652137485" },
+    { display: "0766 017 470", href: "tel:+255766017470" },
+  ],
+  email: "jamesvaileth79@gmail.com",
+  location: "Iringa",
+} as const;
+
 export default function Home() {
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -33,12 +42,20 @@ export default function Home() {
           <span className="text-sm font-bold tracking-tight text-[var(--accent)]">
             VJ
           </span>
-          <a
-            href="#miradi"
-            className="rounded-full border border-[var(--border)] bg-[var(--surface)] px-4 py-1.5 text-sm font-medium text-[var(--muted)] shadow-sm transition hover:border-[var(--accent-bright)] hover:text-[var(--accent)]"
-          >
-            Miradi
-          </a>
+          <div className="flex gap-2">
+            <a
+              href="#mawasiliano"
+              className="rounded-full border border-[var(--border)] bg-[var(--surface)] px-4 py-1.5 text-sm font-medium text-[var(--muted)] shadow-sm transition hover:border-[var(--accent-bright)] hover:text-[var(--accent)]"
+            >
+              Mawasiliano
+            </a>
+            <a
+              href="#miradi"
+              className="rounded-full border border-[var(--border)] bg-[var(--surface)] px-4 py-1.5 text-sm font-medium text-[var(--muted)] shadow-sm transition hover:border-[var(--accent-bright)] hover:text-[var(--accent)]"
+            >
+              Miradi
+            </a>
+          </div>
         </nav>
 
         <header className="space-y-6">
@@ -79,15 +96,66 @@ export default function Home() {
           >
             Ujuzi
           </h2>
-          <ul className="mt-4 flex flex-wrap gap-2">
+          <ul className="mt-4 flex flex-col gap-2">
             {SKILLS.map((item) => (
               <li
                 key={item}
-                className="rounded-full border border-[var(--border)] bg-[var(--accent-soft)] px-4 py-2 text-sm font-medium text-[var(--accent)]"
+                className="rounded-xl border border-[var(--border)] bg-[var(--accent-soft)] px-4 py-3 text-sm font-medium text-[var(--accent)]"
               >
                 {item}
               </li>
             ))}
+          </ul>
+        </section>
+
+        <section
+          id="mawasiliano"
+          className="mt-8 rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 shadow-lg shadow-blue-100/60 sm:p-8"
+          aria-labelledby="contact-heading"
+        >
+          <h2
+            id="contact-heading"
+            className="text-xs font-bold uppercase tracking-wider text-[var(--accent)]"
+          >
+            Mawasiliano
+          </h2>
+          <ul className="mt-4 flex flex-col gap-3">
+            <li>
+              <p className="text-xs font-semibold uppercase tracking-wide text-[var(--muted)]">
+                Simu
+              </p>
+              <ul className="mt-1 flex flex-col gap-1">
+                {CONTACT.phones.map((phone) => (
+                  <li key={phone.href}>
+                    <a
+                      href={phone.href}
+                      className="text-sm font-medium text-[var(--accent)] hover:underline"
+                    >
+                      {phone.display}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </li>
+            <li>
+              <p className="text-xs font-semibold uppercase tracking-wide text-[var(--muted)]">
+                Barua pepe
+              </p>
+              <a
+                href={`mailto:${CONTACT.email}`}
+                className="mt-1 block text-sm font-medium text-[var(--accent)] hover:underline"
+              >
+                {CONTACT.email}
+              </a>
+            </li>
+            <li>
+              <p className="text-xs font-semibold uppercase tracking-wide text-[var(--muted)]">
+                Mahali
+              </p>
+              <p className="mt-1 text-sm font-medium text-[var(--text)]">
+                {CONTACT.location}
+              </p>
+            </li>
           </ul>
         </section>
 
