@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+const NAME = "Sr. Vaileth James, OSB";
+
 const EDUCATION = [
   {
     level: "Diploma",
@@ -139,7 +141,7 @@ export default function Home() {
           <div className="relative mx-auto aspect-[3/4] w-44 shrink-0 overflow-hidden rounded-2xl border-2 border-[var(--border)] bg-[var(--surface)] shadow-xl shadow-blue-200/50 sm:mx-0 sm:w-52">
             <Image
               src="/myimage.jpeg"
-              alt="Vaileth James"
+              alt={NAME}
               fill
               priority
               sizes="(max-width: 640px) 176px, 208px"
@@ -151,7 +153,7 @@ export default function Home() {
               Professional · Academic Portfolio
             </p>
             <h1 className="font-serif text-4xl font-bold tracking-tight text-[var(--text)] sm:text-5xl">
-              Vaileth James
+              {NAME}
             </h1>
             <p className="text-sm font-medium uppercase tracking-wide text-[var(--muted)]">
               Computer Science Engineer · Full Stack AI Engineering
@@ -337,7 +339,7 @@ export default function Home() {
 
         <footer className="mt-16 border-t border-[var(--border)] pt-8 text-center text-sm text-[var(--muted)]">
           <p className="font-serif">
-            © {new Date().getFullYear()} Vaileth James
+            © {new Date().getFullYear()} {NAME}
           </p>
           <p className="mt-1">
             <a
