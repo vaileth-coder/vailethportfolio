@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const NAME = "Sr. Vaileth James, OSB";
+const NAME = "Sr. Vaileth James OSB";
 
 const EDUCATION = [
   {

@@ -19,11 +19,11 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  title: "Sr. Vaileth James, OSB | Professional Portfolio",
+  title: "Sr. Vaileth James OSB | Professional Portfolio",
   description:
     "Bachelor of Engineering in Computer Science Engineering — ICT, AI engineering, and full stack development.",
   openGraph: {
-    title: "Sr. Vaileth James, OSB",
+    title: "Sr. Vaileth James OSB",
     description:
       "Computer Science Engineering · Full Stack AI Engineering · Academic Portfolio",
     type: "website",
