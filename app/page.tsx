@@ -10,8 +10,8 @@ const EDUCATION = [
       "Diploma-level computing and IT foundations, covering core principles of information technology and computer systems.",
   },
   {
-    level: "Shahada ya Kwanza",
-    levelEn: "Bachelor's Degree",
+    level: "Bachelor's Degree",
+    levelEn: "Undergraduate",
     title: "Bachelor of Engineering in Computer Science Engineering",
     institution: "St. Joseph University in Tanzania",
     focus:
@@ -51,14 +51,14 @@ const PROJECTS = [
   {
     title: "KigonZile Dispensary",
     description:
-      "Mfumo wa usimamizi wa hospitali / dispensa — kuingia, kurekodi huduma, na kuendesha shughuli za kliniki kupitia wavuti.",
+      "Hospital and dispensary management system — authentication, service records, and clinic operations delivered through the web.",
     url: "https://kigonzile-dispensary.vercel.app/",
     tag: "Healthcare",
   },
   {
     title: "Ngorongoro TZ",
     description:
-      "Tovuti ya Next.js inayohusiana na eneo la Ngorongoro — mradi wa wavuti wa kisasa uliotengenezwa na kupelekwa Vercel.",
+      "A modern Next.js website focused on the Ngorongoro region — built and deployed on Vercel.",
     url: "https://ngorongorotz.vercel.app/",
     tag: "Next.js",
   },
@@ -119,10 +119,10 @@ export default function Home() {
           </span>
           <div className="flex flex-wrap justify-end gap-2">
             {[
-              { href: "#elimu", label: "Elimu" },
-              { href: "#ujuzi", label: "Ujuzi" },
-              { href: "#mawasiliano", label: "Mawasiliano" },
-              { href: "#miradi", label: "Miradi" },
+              { href: "#education", label: "Education" },
+              { href: "#skills", label: "Skills" },
+              { href: "#contact", label: "Contact" },
+              { href: "#projects", label: "Projects" },
             ].map((link) => (
               <a
                 key={link.href}
@@ -148,7 +148,7 @@ export default function Home() {
           </div>
           <div className="space-y-5">
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[var(--accent)]">
-              Wasifu wa kitaalamu · Academic Portfolio
+              Professional · Academic Portfolio
             </p>
             <h1 className="font-serif text-4xl font-bold tracking-tight text-[var(--text)] sm:text-5xl">
               Vaileth James
@@ -157,26 +157,26 @@ export default function Home() {
               Computer Science Engineer · Full Stack AI Engineering
             </p>
             <p className="max-w-2xl text-base leading-[1.8] text-[var(--muted)] sm:text-lg">
-              Mhandisi wa kompyuta mwenye mafunzo ya kitaaluma katika{" "}
+              A computer engineer with formal training in{" "}
               <em className="font-medium not-italic text-[var(--text)]">
                 Computer Science Engineering
               </em>{" "}
-              na msingi imara wa{" "}
+              and a strong foundation in{" "}
               <em className="font-medium not-italic text-[var(--text)]">
                 computing &amp; IT foundations
               </em>
-              . Nina uzoefu katika mifumo ya ICT, uhandisi wa programu, na
-              matumizi ya teknolojia katika sekta ya afya na fedha.
+              . Experienced in ICT systems, software engineering, and applying
+              technology in healthcare and finance.
             </p>
           </div>
         </header>
 
         <div className="mt-10 space-y-8">
           <SectionCard
-            id="elimu"
+            id="education"
             headingId="education-heading"
             label="Academic Qualifications"
-            title="Elimu"
+            title="Education"
           >
             <ol className="relative space-y-0 border-l-2 border-[var(--border)] pl-6">
               {EDUCATION.map((item, index) => (
@@ -215,10 +215,10 @@ export default function Home() {
           </SectionCard>
 
           <SectionCard
-            id="ujuzi"
+            id="skills"
             headingId="skills-heading"
             label="Professional Competencies"
-            title="Ujuzi na Utaalamu"
+            title="Skills & Expertise"
           >
             <ul className="divide-y divide-[var(--border)] rounded-xl border border-[var(--border)]">
               {COMPETENCIES.map((item, index) => (
@@ -243,15 +243,15 @@ export default function Home() {
           </SectionCard>
 
           <SectionCard
-            id="mawasiliano"
+            id="contact"
             headingId="contact-heading"
             label="Contact Information"
-            title="Mawasiliano"
+            title="Contact"
           >
             <dl className="grid gap-5 sm:grid-cols-3">
               <div>
                 <dt className="text-xs font-bold uppercase tracking-wider text-[var(--muted)]">
-                  Simu
+                  Phone
                 </dt>
                 <dd className="mt-2 space-y-1">
                   {CONTACT.phones.map((phone) => (
@@ -267,7 +267,7 @@ export default function Home() {
               </div>
               <div>
                 <dt className="text-xs font-bold uppercase tracking-wider text-[var(--muted)]">
-                  Barua pepe
+                  Email
                 </dt>
                 <dd className="mt-2">
                   <a
@@ -280,7 +280,7 @@ export default function Home() {
               </div>
               <div>
                 <dt className="text-xs font-bold uppercase tracking-wider text-[var(--muted)]">
-                  Mahali
+                  Location
                 </dt>
                 <dd className="mt-2 text-sm font-medium text-[var(--text)]">
                   {CONTACT.location}
@@ -290,7 +290,7 @@ export default function Home() {
           </SectionCard>
 
           <section
-            id="miradi"
+            id="projects"
             className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 shadow-lg shadow-blue-100/60 sm:p-8"
             aria-labelledby="project-heading"
           >
@@ -301,10 +301,10 @@ export default function Home() {
               id="project-heading"
               className="mt-1 font-serif text-xl font-semibold text-[var(--text)] sm:text-2xl"
             >
-              Miradi ya Wavuti
+              Web Projects
             </h2>
             <p className="mt-2 text-sm text-[var(--muted)]">
-              Miradi yaliyotengenezwa na kupelekwa kwenye Vercel
+              Projects built and deployed on Vercel
             </p>
 
             <ul className="mt-6 grid gap-5 sm:grid-cols-2">
@@ -326,7 +326,7 @@ export default function Home() {
                       rel="noopener noreferrer"
                       className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[var(--accent)] hover:underline"
                     >
-                      Fungua tovuti ↗
+                      Visit website ↗
                     </a>
                   </article>
                 </li>

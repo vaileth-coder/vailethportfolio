@@ -19,7 +19,7 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  title: "Vaileth James | Wasifu wa kitaalamu",
+  title: "Vaileth James | Professional Portfolio",
   description:
     "Bachelor of Engineering in Computer Science Engineering — ICT, AI engineering, and full stack development.",
   openGraph: {
@@ -36,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="sw">
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${sourceSerif.variable} font-sans antialiased`}
       >
